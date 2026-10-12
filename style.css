@@ -1,0 +1,52 @@
+:root{--o:#d27832;--ot:#b8611f;--ink:#231d18;--mut:#6b5f55;--bg:#fffbf7;--can:#ebe5df;--bd:#e2d7cd;--tint:#fff4ea;--ok:#2d9f4a;--off:#3a312a;--bad:#c0392b}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html,body{height:100%}
+body{font-family:Barlow,"Segoe UI",system-ui,sans-serif;background:var(--can);color:var(--ink);font-size:17px}
+#app{max-width:520px;height:100dvh;margin:0 auto;background:var(--bg);display:flex;flex-direction:column;box-shadow:0 0 30px rgba(0,0,0,.12)}
+header{display:flex;justify-content:space-between;align-items:center;padding:12px 20px;padding-top:max(12px,env(safe-area-inset-top));background:var(--ink);color:#fff}
+.brand{font-weight:800;font-size:22px;letter-spacing:.3px}
+.sub{font-size:14px;color:#cdbfb2;margin-top:2px}
+.pill{border:0;border-radius:20px;padding:10px 14px;font:700 14px inherit;font-family:inherit;color:#fff;background:var(--ok);min-height:44px}
+.pill.off{background:#7a6a5d}.pill.q{background:var(--ot)}
+main{flex:1;overflow-y:auto;padding:20px;display:flex;flex-direction:column;gap:14px}
+nav{display:flex;border-top:1px solid var(--bd);background:#fff;padding-bottom:env(safe-area-inset-bottom)}
+nav button{flex:1;border:0;background:none;padding:10px 4px;font:700 13px inherit;font-family:inherit;color:var(--mut);min-height:60px;border-top:4px solid transparent}
+nav button.on{color:var(--ot);border-top-color:var(--o)}
+nav svg{display:block;margin:0 auto 3px;width:24px;height:24px;stroke:currentColor;fill:none;stroke-width:2}
+h2{font-size:30px;font-weight:800;line-height:1.1}
+h3{font-size:19px;font-weight:800}
+.card{background:#fff;border:1px solid var(--bd);border-radius:16px;padding:16px}
+.row{display:flex;gap:10px}.row>*{flex:1}
+label{display:block;font-weight:700;font-size:14px;margin-bottom:5px;color:var(--mut)}
+input,select,textarea{width:100%;min-height:54px;border:2px solid var(--bd);border-radius:12px;padding:0 14px;font:600 18px inherit;font-family:inherit;background:#fff;color:var(--ink)}
+input:focus,select:focus{outline:none;border-color:var(--o)}
+.btn{min-height:56px;border:0;border-radius:14px;background:var(--o);color:#fff;font:800 18px inherit;font-family:inherit;padding:0 20px;width:100%}
+.btn.sec{background:#fff;color:var(--ink);border:2px solid var(--bd)}
+.btn.sm{min-height:44px;font-size:15px;width:auto}
+.btn.bad{background:var(--bad)}
+.big{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px}
+.big button{min-height:96px;border:0;border-radius:16px;background:var(--tint);color:var(--ot);font:800 16px inherit;font-family:inherit;border:2px solid var(--bd)}
+.big svg{display:block;margin:0 auto 6px;width:30px;height:30px;stroke:currentColor;fill:none;stroke-width:2}
+.item{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:12px 0;border-bottom:1px solid var(--bd)}
+.item:last-child{border:0}
+.item b{font-weight:800}.item small{display:block;color:var(--mut);font-size:14px}
+.tag{font-size:12px;font-weight:800;border-radius:8px;padding:3px 8px;background:var(--tint);color:var(--ot)}
+.tag.ok{background:#e4f5e8;color:var(--ok)}
+.result{background:var(--ink);color:#fff;border-radius:16px;padding:18px}
+.result .n{font-size:40px;font-weight:800;color:#ffb577;line-height:1}
+.result small{color:#cdbfb2}
+.thumb{width:64px;height:64px;border-radius:10px;object-fit:cover;background:var(--can)}
+.note{font-size:13px;color:var(--mut)}
+.empty{text-align:center;color:var(--mut);padding:20px}
+.active{border:2px solid var(--o);background:var(--tint)}
+.hb{display:flex;align-items:center;gap:12px}.hlogo{height:40px;width:auto}
+header{border-bottom:4px solid var(--o)}
+.hero{position:relative;border-radius:16px;overflow:hidden;color:#fff;min-height:150px;display:flex;align-items:flex-end;background:#231d18 url(brand/roller.jpg) center/cover}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(35,29,24,.92),rgba(35,29,24,.15))}
+.hero div{position:relative;padding:16px}.hero h2{font-size:26px}.hero p{color:#e6d9cc;font-size:15px;margin-top:2px}
+.splash{position:fixed;inset:0;z-index:20;background:#231d18 url(brand/truck.jpg) center/cover;display:flex;flex-direction:column;justify-content:space-between;align-items:center;padding:56px 28px 40px;text-align:center;color:#fff}
+.splash::before{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,rgba(35,29,24,.85),rgba(35,29,24,.35) 45%,rgba(35,29,24,.95))}
+.splash>*{position:relative;max-width:420px;width:100%}
+.splash img{width:70%;max-width:260px;margin:0 auto;display:block}
+.splash h1{font-size:44px;font-weight:800;line-height:1.05}.splash p{color:#e6d9cc;margin:10px 0 22px;font-size:18px}
+.splash small{display:block;margin-top:14px;color:#cdbfb2}

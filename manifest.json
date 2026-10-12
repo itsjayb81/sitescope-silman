@@ -1,0 +1,9 @@
+{
+  "name": "SiteScope for Silman Bros",
+  "short_name": "SiteScope",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#231d18",
+  "theme_color": "#d27832",
+  "icons": [{"src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any"}]
+}
