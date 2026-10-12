@@ -65,3 +65,4 @@ function sub(parent, name) {
   const it = parent.getFoldersByName(name);
   return it.hasNext() ? it.next() : parent.createFolder(name);
 }
+function setup() { tab('Jobs'); tab('Materials'); tab('Photos'); tab('Measures'); tab('Quotes'); jobFolder('Setup check'); }

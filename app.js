@@ -11,14 +11,16 @@ const DEFAULT_MATERIALS = [
   { id: 'gravel', name: 'Gravel (20mm)', density: 1.6, compaction: 1.1, rate: 70, unit: 't' },
   { id: 'sand', name: 'Sand (washed)', density: 1.6, compaction: 1.15, rate: 55, unit: 't' },
 ];
+const OFFICE_LINK = 'https://script.google.com/macros/s/AKfycbw044abhJhKzcvc_CxmqsKgLOg_WmB18o8PTuMsqU7jaOx1S2dUSIxEpGQiC7JdCZbG/exec';
 const fresh = () => ({
   jobs: [{ id: 'j1', name: 'Sample job', site: '' }], activeJob: 'j1',
   photos: [], measures: [], calcs: [], queue: [],
-  materials: DEFAULT_MATERIALS, settings: { syncUrl: '', who: '', waste: 10 },
+  materials: DEFAULT_MATERIALS, settings: { syncUrl: OFFICE_LINK, who: '', waste: 10 },
   lastSync: null, lastRates: null,
 });
 let S;
 try { S = Object.assign(fresh(), JSON.parse(localStorage.getItem(LS) || '{}')); } catch (e) { S = fresh(); }
+if (!S.settings.syncUrl) S.settings.syncUrl = OFFICE_LINK;
 const save = () => { try { localStorage.setItem(LS, JSON.stringify(S)); } catch (e) { toast('Phone storage full'); } };
 
 // photos live in IndexedDB (too big for localStorage)
